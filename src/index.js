@@ -17,8 +17,10 @@ const app = express();
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-
-mongoose.connect('mongodb+srv://alex:mZcvPnvbdAUHfiCb@cluster0.0rlkz.mongodb.net/chat?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://alex:OrdenadoR@cluster0.0rlkz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000})
 .then(db=>console.log('db is conected'))
 .catch(err=>console.log('problemas al conectar a la bd ',err));
 
