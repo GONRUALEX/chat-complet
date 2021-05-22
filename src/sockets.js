@@ -8,7 +8,7 @@ let users = {};
 io.on('connection', async socket =>{
     console.log("conexión realizada");
 
-    let messages = await Chat.find().limit(8).sort({date:1});
+    let messages = await Chat.find().sort({created_at:-1}).limit(20);
     socket.emit('load msgs',messages);
 
     socket.on('send message',async (data,cb)=>{
@@ -23,7 +23,6 @@ io.on('connection', async socket =>{
                 var name = msg.substring(0,index);
                 var msg = msg.substring(index + 1);
                 if (name in users){
-                    console.log("está dentro de users")
                     //para enviar un mensaje privado cogemos el valor del socket 
                     // del usuario al que queremos mandar un mensaje y le emitimos
                     // un evento whisper y le enviamos el mensaje y el nombre dle usuario
@@ -80,12 +79,22 @@ io.on('connection', async socket =>{
         delete users[socket.nickname];
         //envío los nuevos nicknames
         updateNickName();
+        socket.broadcast.emit('noTipeando', socket.nickname);
     });
 
     function updateNickName(){
         //con objects.keys mandara un arreglo de los usuarios 
         io.sockets.emit('nicknames', Object.keys(users));
     }
+
+    socket.on('typing',(data)=>{
+      socket.broadcast.emit('tipeando', socket.nickname);
+    });
+
+    socket.on('noTyping',(data)=>{
+        socket.broadcast.emit('noTipeando', socket.nickname);
+      });
+
 }); 
 
 }

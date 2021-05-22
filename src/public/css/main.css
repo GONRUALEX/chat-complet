@@ -22,3 +22,81 @@ body{
     color:gray;
     font-style:italic;
 }
+
+#chat{
+    height: 300px;
+    overflow-y:scroll;
+    color:rgb(12, 93, 117);
+    background: #50C9C3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+#message-form{
+     background: #1A2980;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.card-header{
+    height: 100%;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+button{
+    color:white !important;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button i{
+    color:white;
+}
+
+.navbar{
+    color:white;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card{
+    padding:0px;
+}
+
+.navbar>a{
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+#nickname{
+    color:rgb(0, 60, 128);
+    font-weight: 600;
+}
+
+#message{
+    color:rgb(0, 60, 128);
+    font-weight: 600;
+}
+
+#usernames{
+    height: 320px;
+    overflow-y:scroll;
+}
+
+#tiping{
+    font-size:14px;
+    font-weight: 200;
+    max-height:15px;
+}

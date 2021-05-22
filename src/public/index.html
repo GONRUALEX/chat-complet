@@ -10,40 +10,44 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-warning">
+    <nav class="navbar navbar-light">
         <a class="navba-brand mx-auto" href="/">Chat</a>
     </nav>
-
-    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
-        <div class="card-header">
-            <h3>Enter your Username:</h3>
-        </div>
-        <p id="nickError"></p>
-        <div class="card-body d-flex justify-content-center align-items-center">
-            <form id="nickForm" class="d-flex flex-column justify-content-center align-items-center">
-                <input type="text" id="nickname" class="form-control">
-                <button type="submit" class="btn btn-warning btn-block mt-2">
-                    Enviar
-                    <i class="fas fa-location-arrow"></i>
-                </button>
-           </form>
+    <div class="container">
+        <div class="row mt-4 d-flex justify-content-center align-items-center">
+            <div class="card col-md-6" id="nickWrap">
+                <div class="card-header">
+                    <h3>Enter your Username:</h3>
+                </div>
+                <p id="nickError"></p>
+                <div class="card-body d-flex justify-content-center align-items-center">
+                    <form id="nickForm" class="d-flex flex-column justify-content-center align-items-center">
+                        <input type="text" id="nickname" class="form-control">
+                        <button type="submit" class="btn btn-block mt-2">
+                            Enviar
+                            <i class="fas fa-location-arrow"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="container" id="contentWrap">
-        <div class="row mt-4">
+        <div class="row mt-4 d-flex justify-content-center align-items-center">
             <div class="col-md-6 offset-md-1">
                 <div class="card">
                     <div class="card-header">
-                        <g4>Chat..</g4>
+                        <h3>Chat..</h3>
+                        <div id="tiping"></div>
                     </div>
-    
+
                     <div id="chat" class="card-body"></div>
                     <form id="message-form" class="card-footer">
                         <div class="input-group">
                             <input type="text" id="message" class="form-control">
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-warning">
+                                <button type="submit" class="btn">
                                     <i class="fas fa-location-arrow"></i>
                                 </button>
                             </div>
